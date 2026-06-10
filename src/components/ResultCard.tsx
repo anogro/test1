@@ -33,21 +33,21 @@ export default function ResultCard({ result, onRestart }: ResultCardProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="w-full flex flex-col items-center justify-center mb-10"
+        className="w-full flex flex-col items-center justify-center mb-12"
       >
-        <div className="w-48 h-48 md:w-64 md:h-64 relative flex items-center justify-center mb-6">
+        <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 relative flex items-center justify-center mb-10">
           {/* 캐릭터 이미지가 들어갈 자리입니다. (배경 없음) */}
           <img 
             src={result.bgImage} 
             alt={result.name} 
-            className="max-w-full max-h-full object-contain drop-shadow-xl"
+            className="w-full h-full object-contain drop-shadow-2xl"
           />
         </div>
-        <div className="text-center px-4">
-          <h2 className="text-[#FF8A00] text-xl md:text-2xl font-black mb-3">
-            "{result.cardQuote}"
+        <div className="text-center px-4 mt-2">
+          <h2 className="text-[#FF8A00] text-2xl md:text-3xl font-black mb-4">
+            {result.cardQuote}
           </h2>
-          <p className="text-slate-600 font-medium text-lg break-keep">
+          <p className="text-slate-600 font-bold text-lg md:text-xl break-keep">
             {result.desc}
           </p>
         </div>
