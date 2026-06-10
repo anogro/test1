@@ -43,8 +43,8 @@ export default function ResultCard({ result, onRestart }: ResultCardProps) {
             className="w-full h-full object-contain drop-shadow-2xl"
           />
         </div>
-        <div className="text-center px-4 mt-2">
-          <h2 className="text-[#FF8A00] text-2xl md:text-3xl font-black mb-4">
+        <div className="text-center px-4 mt-2 max-w-[90%] md:max-w-md mx-auto">
+          <h2 className="text-[#FF8A00] text-2xl md:text-3xl font-black mb-4 break-keep">
             {result.cardQuote}
           </h2>
           <p className="text-slate-600 font-bold text-lg md:text-xl break-keep">
