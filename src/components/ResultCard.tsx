@@ -5,9 +5,10 @@ import { RefreshCcw, Check, AlertCircle } from 'lucide-react';
 interface ResultCardProps {
   result: ResultData;
   onRestart: () => void;
+  onRequestProgram: () => void;
 }
 
-export default function ResultCard({ result, onRestart }: ResultCardProps) {
+export default function ResultCard({ result, onRestart, onRequestProgram }: ResultCardProps) {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -111,8 +112,11 @@ export default function ResultCard({ result, onRestart }: ResultCardProps) {
         transition={{ delay: 0.3 }}
         className="w-full flex flex-col gap-3 pb-8"
       >
-        <button className="w-full bg-[#FF8A00] hover:bg-[#E67700] text-white font-extrabold text-lg py-5 px-6 rounded-2xl shadow-md transition-all active:scale-95">
-          {result.ctaPrimary}
+        <button 
+          onClick={onRequestProgram}
+          className="w-full bg-[#FF8A00] hover:bg-[#E67700] text-white font-extrabold text-lg py-5 px-6 rounded-2xl shadow-md transition-all active:scale-95"
+        >
+          나에게 맞는 프로그램 추천받기
         </button>
         <button 
           onClick={onRestart}
